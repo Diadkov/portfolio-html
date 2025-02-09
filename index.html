@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Мета-теги для підтримки прогресивного веб-додатку на Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#111">
+  <!-- Підключення файлу manifest.json (не забудьте створити його в кореневій папці) -->
+  <link rel="manifest" href="manifest.json">
+  
   <title>My Project - Resume & Services</title>
   <style>
     /* Reset basic styles */
@@ -119,7 +125,7 @@
       }
     }
     
-    /* Section styles (About, Services, What's Next) */
+    /* Section styles (About, Services, Articles, What's Next) */
     section {
       padding: 6rem 2rem;
       max-width: 900px;
@@ -229,6 +235,9 @@
       <a href="mailto:v.k.diadkov@gmail.com" title="Email">
         <img src="Resources/email.png" alt="Email">
       </a>
+      <a href="https://github.com/Diadkov" target="_blank" title="GitHub">
+        <img src="Resources/github.png" alt="GitHub">
+      </a>
     </div>
   </div>
   
@@ -257,6 +266,14 @@
       <span>Embedded Systems</span>
     </p>
   </section>
+  
+  <!-- Articles Section inside Main -->
+  <main>
+    <section id="articles">
+      <h2 class="section-title">Articles</h2>
+      <p>Coming soon: Articles will be published here.</p>
+    </section>
+  </main>
   
   <!-- What's Next Section (combined Contact and Next) -->
   <section id="next">
