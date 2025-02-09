@@ -19,7 +19,7 @@
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+      grid-template-columns: repeat(2, 1fr); /* 2 зображення в одному рядку для великих екранів */
       gap: 10px;
       margin-top: 20px;
     }
@@ -32,6 +32,12 @@
     }
     .gallery img:hover {
       transform: scale(1.05);
+    }
+    /* Адаптивність для менших екранів (наприклад, мобільних) */
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr; /* 1 зображення в рядку */
+      }
     }
   </style>
 </head>
