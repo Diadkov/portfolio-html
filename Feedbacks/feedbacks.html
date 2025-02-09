@@ -7,19 +7,42 @@
   <title>Feedbacks</title>
   <!-- Inline CSS -->
   <style>
+    /* Base styles for body */
     body {
       background-color: #8174A0;
       margin: 0;
       padding: 20px;
       font-family: Arial, sans-serif;
     }
+    /* Total ratings block */
+    .overall-rating {
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .rating-score {
+      font-size: 2em; /* Increased font size for emphasis */
+      font-weight: bold;
+      color: #FFD700;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+    }
+    .rating-stars {
+      font-size: 2em;
+      /* Filled stars color (gold) */
+      color: #FFD700;
+    }
+    .rating-stars .star.empty {
+      color: #ccc; /* Empty stars displayed in gray */
+    }
     h3 {
       color: #FFD2A0;
       text-align: center;
+      font-size: 2em;
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2 зображення в одному рядку для великих екранів */
+      grid-template-columns: repeat(2, 1fr); /* 2 images per row on large screens */
       gap: 10px;
       margin-top: 20px;
     }
@@ -33,15 +56,27 @@
     .gallery img:hover {
       transform: scale(1.05);
     }
-    /* Адаптивність для менших екранів (наприклад, мобільних) */
+    /* Responsive styles for smaller screens (e.g., mobile) */
     @media (max-width: 600px) {
       .gallery {
-        grid-template-columns: 1fr; /* 1 зображення в рядку */
+        grid-template-columns: 1fr; /* 1 image per row */
       }
     }
   </style>
 </head>
 <body>
+  <!-- Overall Rating -->
+  <div class="overall-rating">
+    <p class="rating-score">Overall Rating: 5.0 / 5.0</p>
+    <div class="rating-stars">
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+    </div>
+  </div>
+  
   <h3>Great that you got here!<br>This page contains all the feedbacks.</h3>
   <div class="gallery">
     <img src="1.png" alt="Feedback 1">
